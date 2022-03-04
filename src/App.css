@@ -31,6 +31,12 @@
   color: #61dafb;
 }
 
+#outlined-size-small {
+  background-color: seashell;
+  border-radius: 3px;
+  width: 50px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
