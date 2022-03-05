@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
-import logo from './logo.svg';
 import { Button, Stack, TextField } from '@mui/material';
+import Circle  from './components/Circle';
+import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -8,7 +9,12 @@ function App() {
 
   const [start, setStart] = useState(false);
   const [second, setSecond] = useState(180);
-  const [milliSecond, setMilliSecond] = useState(180000)
+  const [milliSecond, setMilliSecond] = useState(0);
+
+  useEffect(() => {
+    setMilliSecond(second * 1000);
+  }, [second, milliSecond]);
+
 
   useEffect(() => {
     let interval: number | undefined;
@@ -23,9 +29,6 @@ function App() {
     return () => clearInterval(interval);
   }, [start]);
 
-  useEffect(() => {
-    setMilliSecond(second * 1000);
-  }, [second, milliSecond]);
 
   const resetTimeHandler = () => {
     setTime(0);
@@ -36,10 +39,13 @@ function App() {
       <header
         className="App-header"
         style={{
-          backgroundColor: time >= milliSecond ? 'orangered' : 'aquamarine',
+          backgroundColor: time >= milliSecond ? 'orangered' : 'lightcyan',
         }}
       >
-        <img src={logo} className="App-logo" alt="logo" />
+        <div className="item">
+          <img src={logo} className="App-logo" alt="logo" />
+          <Circle r={200} strokeWidth={20} value={time} max={milliSecond} color='#6fdb6f'/>
+        </div>
         <p
           className="time"
           style={{ color: time >= milliSecond ? 'lightyellow' : 'royalblue' }}
@@ -73,15 +79,14 @@ function App() {
             RESET
           </Button>
         </Stack>
-        <Stack style={{margin: '10px'}} direction="row" spacing={2}>
+        <p>下のフォームに背景色を変化させたい<br />タイミングを秒数で入力してください</p>
           <TextField
             id="outlined-size-small"
             size="small"
             value={second}
             type="number"
-            onChange={event => setSecond(Number(event.target.value))}
+            onChange={(event) => setSecond(Number(event.target.value))}
           />
-        </Stack>
       </header>
     </div>
   );

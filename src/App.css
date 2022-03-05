@@ -3,8 +3,13 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 100%;
   pointer-events: none;
+  text-align:center;
+  position: absolute;
+  line-height: 4em;
+  width: 100%;
+  font-size:2.5em;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -13,13 +18,17 @@
   }
 }
 
+.item {
+  position: relative;
+  float: left;
+}
+
 .App-header {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
 }
 
 .time {
