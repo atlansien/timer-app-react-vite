@@ -19,7 +19,7 @@ function App() {
   useEffect(() => {
     let interval: number | undefined;
     if (start) {
-      interval = setInterval(() => {
+      interval = window.setInterval(() => {
         setTime((prevTime) => prevTime + 10);
       }, 10);
     } else {
