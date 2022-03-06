@@ -11,8 +11,8 @@ const Template: ComponentStory<typeof Button> = (props) => (
   <Button {...props} />
 );
 
-export const CircleComponent = Template.bind({});
-CircleComponent.args = {
+export const ButtonComponent = Template.bind({});
+ButtonComponent.args = {
   color: "#royalblue",
   value: 'CLICK!',
   event: () => console.log('click!')

@@ -44,7 +44,7 @@ const Time = (props: Props) => {
         <br />
         タイミングを秒数で入力してください
       </p>
-      <TextForm second={second} onChange={e => changeEventHandler(e)} />
+      <TextForm value={second} type="number" onChange={e => changeEventHandler(e)} />
       </div>
     </React.Fragment>
   );

@@ -1,19 +1,20 @@
 import './TextForm.css';
 
 type Props = Readonly<{
-  second: number;
+  value: string | number;
+  type: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
 }>;
 
 const Time = (props: Props) => {
-  const { second, onChange } = props;
+  const { value, type, onChange } = props;
 
 
   return (
       <input
         className="text-field"
-        value={second}
-        type="number"
+        value={value}
+        type={type}
         onChange={e => onChange(e)}
       />
   );
