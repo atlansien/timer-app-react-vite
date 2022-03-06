@@ -1,10 +1,10 @@
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import Time  from "../../components/atoms/Time";
+import Time  from "../../../components/atoms/Time";
 
 export default {
-  title: "Circle",
+  title: "Time",
   component: Time,
 } as ComponentMeta<typeof Time>;
 
