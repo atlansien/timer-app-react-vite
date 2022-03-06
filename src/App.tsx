@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import Circle  from './components/Circle';
-import Form from './components/Form'
+import Circle  from './components/atoms/Circle';
+import Form from './components/molecules/Form'
 import logo from './logo.svg';
 import './App.css';
-import Time from './components/Time';
+import Time from './components/atoms/Time';
 
 function App() {
   const [time, setTime] = useState(0);
@@ -43,7 +43,7 @@ function App() {
           <Circle r={200} strokeWidth={20} value={time} max={milliSecond} color='#6fdb6f'/>
         </div>
         <Time  time={time} milliSecond={milliSecond}/>
-        <Form start={start} second={second} setStart={setStart} setTime={setTime} setSecond={setSecond} />
+        <Form time={time} start={start} second={second} setStart={setStart} setTime={setTime} setSecond={setSecond} />
       </header>
     </div>
   );
