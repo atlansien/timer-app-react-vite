@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '../atoms/Button';
+import TextForm from '../atoms/TextForm';
 import './Form.css';
 
 type Props = Readonly<{
@@ -26,6 +27,10 @@ const Time = (props: Props) => {
     setTime(0)
   }
 
+  const changeEventHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSecond(Number(e.target.value));
+  }
+
   return (
     <React.Fragment>
       <div className="item">
@@ -39,12 +44,7 @@ const Time = (props: Props) => {
         <br />
         タイミングを秒数で入力してください
       </p>
-      <input
-        className="text-field"
-        value={second}
-        type="number"
-        onChange={(event) => setSecond(Number(event.target.value))}
-      />
+      <TextForm second={second} onChange={e => changeEventHandler(e)} />
       </div>
     </React.Fragment>
   );
