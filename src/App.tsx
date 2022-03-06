@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import Circle  from './components/atoms/Circle';
-import Form from './components/molecules/Form'
-import logo from './logo.svg';
-import './App.css';
-import Time from './components/atoms/Time';
+import Circle  from '@/components/atoms/Circle';
+import Form from '@/components/molecules/Form'
+import Time from '@/components/atoms/Time';
+import logo from '@/logo.svg';
+import '@/App.css';
 
 function App() {
   const [time, setTime] = useState(0);

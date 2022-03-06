@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from '../atoms/Button';
-import TextForm from '../atoms/TextForm';
+import Button from '@/components/atoms/Button';
+import TextForm from '@/components/atoms/TextForm';
 import './Form.css';
 
 type Props = Readonly<{
