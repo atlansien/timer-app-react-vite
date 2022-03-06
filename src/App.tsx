@@ -43,7 +43,7 @@ function App() {
           <Circle r={200} strokeWidth={20} value={time} max={milliSecond} color='#6fdb6f'/>
         </div>
         <Time  time={time} milliSecond={milliSecond}/>
-        <Form second={second} setStart={setStart} setTime={setTime} setSecond={setSecond} />
+        <Form start={start} second={second} setStart={setStart} setTime={setTime} setSecond={setSecond} />
       </header>
     </div>
   );
