@@ -45,9 +45,8 @@ const Time = (props: Props) => {
         <br />
         タイミングを秒数で入力してください
       </p>
-      <TextField
+      <input
         className="text-field"
-        size="small"
         value={second}
         type="number"
         onChange={(event) => setSecond(Number(event.target.value))}
