@@ -1,17 +1,3 @@
-.text-field {
-  background-color: seashell;
-  border-radius: 3px;
-  width: 50px;
-  font-size: 18px;
-  padding: 0.5rem;
-  color: #464646;
-}
-
-.button-form {
-  display: flex;
-  justify-content: center;
-}
-
 .button {
   font-size: 16px;
   color: white;

@@ -1,8 +1,10 @@
 import React from 'react';
+import Button from '../atoms/Button';
 import './Form.css';
 
 type Props = Readonly<{
   start: boolean;
+  time: number;
   second: number;
   setStart: React.Dispatch<React.SetStateAction<boolean>>;
   setTime: React.Dispatch<React.SetStateAction<number>>;
@@ -10,32 +12,26 @@ type Props = Readonly<{
 }>;
 
 const Time = (props: Props) => {
-  const { start, second, setStart, setTime, setSecond } = props;
+  const { start, time, second, setStart, setTime, setSecond } = props;
+
+  const startEventHandler = () => {
+    setStart(true);
+  }
+
+  const stopEventHandler = () => {
+    setStart(false);
+  }
+
+  const resetEventHandler = () => {
+    setTime(0)
+  }
 
   return (
     <React.Fragment>
       <div className="button-form">
-        {!start && <input
-          type="button"
-          className="button"
-          value="START"
-          style={{ backgroundColor: 'royalblue' }}
-          onClick={() => setStart(true)}
-        />}
-        {start && <input
-          type="button"
-          className="button"
-          value="STOP"
-          style={{ backgroundColor: 'orangered' }}
-          onClick={() => setStart(false)}
-        />}
-        <input
-          type="button"
-          className="button"
-          value="RESET"
-          style={{ color: 'dimgray' }}
-          onClick={() => setTime(0)}
-        />
+        {!start && <Button value='START' color='royalblue' event={startEventHandler} />}
+        {start && <Button value='STOP' color='red' event={stopEventHandler} />}
+        {time !== 0 && <Button value='RESET' color='dimgray' event={resetEventHandler} />}
       </div>
       <p>
         下のフォームに背景色を変化させたい

@@ -1,7 +1,7 @@
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import Time  from "../../components/Time";
+import Time  from "../../components/atoms/Time";
 
 export default {
   title: "Circle",

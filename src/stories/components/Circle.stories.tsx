@@ -1,7 +1,7 @@
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import Circle  from "../../components/Circle";
+import Circle  from "../../components/atoms/Circle";
 
 export default {
   title: "Circle",
