@@ -3,6 +3,7 @@ import { Button, Stack, TextField } from '@mui/material';
 import Circle  from './components/Circle';
 import logo from './logo.svg';
 import './App.css';
+import Time from './components/Time';
 
 function App() {
   const [time, setTime] = useState(0);
@@ -46,13 +47,7 @@ function App() {
           <img src={logo} className="App-logo" alt="logo" />
           <Circle r={200} strokeWidth={20} value={time} max={milliSecond} color='#6fdb6f'/>
         </div>
-        <p
-          className="time"
-          style={{ color: time >= milliSecond ? 'lightyellow' : 'royalblue' }}
-        >
-          <span>{('0' + (Math.floor(time / 1000 / 60) % 60)).slice(-2)}</span>:
-          <span>{('0' + (Math.floor(time / 1000) % 60)).slice(-2)}</span>
-        </p>
+        <Time  time={time} milliSecond={milliSecond}/>
         <Stack direction="row" spacing={2}>
           <Button
             variant="contained"

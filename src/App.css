@@ -31,12 +31,6 @@
   float: left;
 }
 
-
-.time {
-  font-size: calc(10px + 10vmin);
-  margin: 10px auto
-}
-
 #outlined-size-small {
   background-color: seashell;
   border-radius: 3px;

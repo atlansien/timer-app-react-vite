@@ -1,4 +1,4 @@
-import { SVGAttributes, useMemo } from "react";
+import { SVGAttributes } from "react";
 
 type Props = Readonly<{
   color: SVGAttributes<SVGCircleElement>["stroke"];
