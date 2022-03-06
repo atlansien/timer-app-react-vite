@@ -1,7 +1,7 @@
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import TextForm  from "../../../components/atoms/TextForm";
+import TextForm  from "@/components/atoms/TextForm";
 
 export default {
   title: "TextForm",
