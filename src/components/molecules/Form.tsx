@@ -28,6 +28,7 @@ const Time = (props: Props) => {
 
   return (
     <React.Fragment>
+      <div className="item">
       <div className="button-form">
         {!start && <Button value='START' color='royalblue' event={startEventHandler} />}
         {start && <Button value='STOP' color='red' event={stopEventHandler} />}
@@ -44,6 +45,7 @@ const Time = (props: Props) => {
         type="number"
         onChange={(event) => setSecond(Number(event.target.value))}
       />
+      </div>
     </React.Fragment>
   );
 };
