@@ -31,18 +31,6 @@
   float: left;
 }
 
-
-.time {
-  font-size: calc(10px + 10vmin);
-  margin: 10px auto
-}
-
-#outlined-size-small {
-  background-color: seashell;
-  border-radius: 3px;
-  width: 50px;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
