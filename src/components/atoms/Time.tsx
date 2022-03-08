@@ -17,7 +17,7 @@ const Time = (props: Props) => {
   }
 
   return (
-    <p className='time' style={{color: timeColor()}}>
+    <p className='time' role='time' style={{color: timeColor()}}>
       {minute}:{second}
     </p>
   )
